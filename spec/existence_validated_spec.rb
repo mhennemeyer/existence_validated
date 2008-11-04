@@ -3,9 +3,10 @@ require File.dirname(__FILE__) + '/spec_helper'
 describe "existence_validated" do
   
   before(:all) do
+    class Assoc < ActiveRecord::Base
+    end
     class Model < ActiveRecord::Base
       belongs_to :assoc
-      validates_existence_of :assoc
     end
   end
   
@@ -15,7 +16,7 @@ describe "existence_validated" do
     }.update(existence_validated([:assoc], options)).update(options)
   end
   
-  it "should not fail" do
+  it "should not fail " do
     Model.create!(valid_attributes)
   end
 end

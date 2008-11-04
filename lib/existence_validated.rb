@@ -1,4 +1,4 @@
-# def existence_validated(assocs=[], options={})
+def existence_validated(assocs=[], options={})
 #   def existing_assoc(sym, mock=nil)
 #     klass = sym.to_s.capitalize.constantize
 #     obj = mock || mock_model(klass)
@@ -15,4 +15,5 @@
 #       existing_assoc(sym, options[sym]) 
 #     end
 #   end.inject {|s,i| s.merge(i)}
-# end
+{}
+end

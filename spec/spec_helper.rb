@@ -11,4 +11,8 @@ ActiveRecord::Base.establish_connection(
 
 
 ActiveRecord::Migration.create_table :models do |t|
+  t.integer :assoc_id
+  t.string :name
+end
+ActiveRecord::Migration.create_table :assocs do |t|
 end
