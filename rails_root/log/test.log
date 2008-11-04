@@ -1365,3 +1365,206 @@
  FROM sqlite_master
  WHERE type = 'table' AND NOT name = 'sqlite_sequence'
 [0m
+  [4;36;1mSQL (0.000961)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000625)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mModel Create (0.000722)[0m   [0;1mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.000793)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAssoc Exists (0.000297)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Create (0.000672)[0m   [0;1mINSERT INTO assocs VALUES(NULL)[0m
+  [4;35;1mAssoc Exists (0.000433)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" = 1) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000352)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" = 1) LIMIT 1[0m
+  [4;35;1mModel Create (0.000270)[0m   [0mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000822)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000662)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mModel Create (0.000582)[0m   [0;1mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1003)[0m
+  [4;35;1mSQL (0.000819)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000647)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000769)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000772)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000670)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000640)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mAssoc Exists (0.000317)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000212)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000186)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000184)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000183)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000186)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000185)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000186)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000185)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000690)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000830)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000710)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000647)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mModel Create (0.000598)[0m   [0mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1011)[0m
+  [4;36;1mAssoc Exists (0.000721)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000243)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000784)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000356)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000245)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000210)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000203)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000225)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000305)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000212)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000192)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000195)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000688)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000947)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000634)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mModel Create (0.000656)[0m   [0;1mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, NULL)[0m
+  [4;35;1mSQL (0.000794)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAssoc Exists (0.000322)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Create (0.000703)[0m   [0;1mINSERT INTO assocs VALUES(NULL)[0m
+  [4;35;1mAssoc Exists (0.000420)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" = 1) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000346)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" = 1) LIMIT 1[0m
+  [4;35;1mModel Create (0.000261)[0m   [0mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1)[0m
+  [4;36;1mSQL (0.000783)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000606)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mModel Create (0.000590)[0m   [0;1mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1003)[0m
+  [4;35;1mModel Create (0.000593)[0m   [0mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1004)[0m
+  [4;36;1mSQL (0.000956)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000674)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000743)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000685)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000766)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000615)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000626)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mAssoc Exists (0.000320)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000185)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000183)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000182)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000183)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000196)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000185)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000191)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000184)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mSQL (0.000654)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000772)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000649)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000613)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mModel Create (0.000589)[0m   [0;1mINSERT INTO "models" ("name", "assoc_id") VALUES(NULL, 1011)[0m
+  [4;35;1mAssoc Exists (0.000367)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000190)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000187)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000183)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000184)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000183)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000183)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000185)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000216)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000217)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mAssoc Exists (0.000184)[0m   [0mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;36;1mAssoc Exists (0.000191)[0m   [0;1mSELECT "assocs".id FROM "assocs" WHERE ("assocs"."id" IS NULL) LIMIT 1[0m
+  [4;35;1mSQL (0.000661)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m

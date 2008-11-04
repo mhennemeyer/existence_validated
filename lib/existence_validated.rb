@@ -1,4 +1,5 @@
 def existence_validated(assocs=[], options={})
+  assocs = [assocs] unless assocs.respond_to?(:each)
   hash ||= {}
   assocs.each do |assoc|
     unless options.has_key?(assoc) && options[assoc] == nil

@@ -1,0 +1,32 @@
+= existence_validated
+
+by Matthias Hennemeyer <mhennemeyer@gmail.com>
+
+== Introduction
+
+Rails Plugin. Depends on rspec/rails.
+Mock belongs_to associations that are required via validates_existence_of.
+
+== Usage
+
+Consider the following Model:
+
+class Model < ActiveRecord::Base
+  belongs_to :assoc
+  validates_existence_of :assoc
+end
+
+If you mock the belongs_to association like this:
+Model.create!(:assoc => mock_model(Assoc))
+an error will be raised, because validates_existence 
+verifies that the associated object really exists.
+
+With existence_validated it works just fine:
+Model.create!(existence_validated(:assoc))
+
+== INSTALL:
+
+  $ ruby script/plugin install git://github.com/mhennemeyer/existence_validated.git
+
+
+Copyright (c) 2008 Matthias Hennemeyer, released under the MIT license
