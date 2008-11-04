@@ -118,6 +118,11 @@ describe "existence_validated" do
           lambda {Model.create!(existence_validated([:assoc, :other_assoc], :assoc => nil))}.should raise_error(/Assoc/)
           lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(/OtherAssoc/)
         end
+        
+        it "should not fail if both required assocs are provided, but one is specified in the options" do
+          Model.create!(existence_validated([:assoc, :other_assoc], :assoc => mock_model(Assoc)))
+          Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => mock_model(OtherAssoc)))
+        end
       end
     end
   end

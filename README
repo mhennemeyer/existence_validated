@@ -24,6 +24,47 @@ verifies that the associated object really exists.
 With existence_validated it works just fine:
 Model.create!(existence_validated(:assoc))
 
+It is also possible to pass an array of multiple required association identifiers:
+Consider 
+
+class OtherModel < ActiveRecord::Base
+  belongs_to :assoc
+  validates_existence_of :assoc
+  
+  belongs_to :other_assoc
+  validates_existence_of :other_assoc
+end
+
+OtherModel.create!(existence_validated([:assoc, :other_assoc]))
+
+=== I want to pass a specific mock object to my model!
+
+No problem. existence_validated takes an optional hash where you can specify this:
+Model.create!(existence_validated([:other_assoc, :assoc], :assoc => mock_model(Assoc)))
+
+=== I want to set an association to nil 
+
+Model.create!(existence_validated([:other_assoc, :assoc], :assoc => nil))
+(raises)
+
+=== Use Case
+Consider the following valid_attributes helper method:
+def valid_attributes(options={})
+  assocs = [:user, :vendor]
+  {
+    :name => "Name",
+    :price => 123
+  }.update( existence_validated(assocs, options) ).update(options)
+end
+
+You can use this helper intuitional:
+
+it "should require a user" do
+  lambda {Model.create!(valid_attributes(:user => nil))}.should raise_error(/User/)
+end
+  
+
+
 == INSTALL:
 
   $ ruby script/plugin install git://github.com/mhennemeyer/existence_validated.git
