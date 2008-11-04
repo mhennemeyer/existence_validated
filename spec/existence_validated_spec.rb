@@ -3,7 +3,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 describe "existence_validated" do
   
   before(:all) do
-    class Model
+    class Model < ActiveRecord::Base
       belongs_to :assoc
       validates_existence_of :assoc
     end
