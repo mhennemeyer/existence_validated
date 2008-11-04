@@ -1,12 +1,15 @@
 def existence_validated(assocs=[], options={})
   hash ||= {}
   assocs.each do |assoc|
-    klass = assoc.camelize.constantize
-    mock = mock_model(klass)
-    hash = {
-      assoc.to_s.concat("_id").to_sym => mock.id,
-      assoc => mock
-    }
+    unless options.has_key?(assoc) && options[assoc] == nil
+      klass = assoc.to_s.camelize.constantize
+      mock = options[assoc] || mock_model(klass)
+      klass.should_receive(:exists?).any_number_of_times.with(mock.id).and_return(true)
+      hash.update({
+        assoc.to_s.concat("_id").to_sym => mock.id,
+        assoc => mock
+      })
+    end
   end
   hash
 end
