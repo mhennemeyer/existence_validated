@@ -97,7 +97,7 @@ describe "existence_validated" do
       
       it "should fail if one of the required associations is not in place" do
         lambda{Model.create!(existence_validated([:other_assoc]))}.should raise_error(/Assoc/)
-        lambda{Model.create!(existence_validated([:assoc]))}.should raise_error(/OtherAssoc/)
+        lambda{Model.create!(existence_validated([:assoc]))}.should raise_error(/Other/)
       end
       
       describe "existence_validated([:assocs, :other_assoc])" do
@@ -116,12 +116,23 @@ describe "existence_validated" do
         
         it "should fail if both required assocs are provided, but one is nilified in the options" do
           lambda {Model.create!(existence_validated([:assoc, :other_assoc], :assoc => nil))}.should raise_error(/Assoc/)
-          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(/OtherAssoc/)
+          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(/Other/)
         end
         
         it "should not fail if both required assocs are provided, but one is specified in the options" do
           Model.create!(existence_validated([:assoc, :other_assoc], :assoc => mock_model(Assoc)))
           Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => mock_model(OtherAssoc)))
+        end
+        
+        it "should work any number of times" do
+          model = Model.create!(existence_validated([:assoc, :other_assoc]))
+          model.should be_valid
+          model.should be_valid
+        end
+        
+        it "should work with before_save callback" do
+          Model.instance_eval {before_save {puts "Hello Horst"}}
+          Model.create!(existence_validated([:assoc, :other_assoc]))
         end
       end
     end
