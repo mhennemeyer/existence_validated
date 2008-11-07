@@ -6,6 +6,10 @@ by Matthias Hennemeyer <mhennemeyer@gmail.com>
 
 Rails Plugin. Depends on rspec/rails.
 Mock belongs_to associations that are required via validates_existence_of.
+A call to existence_validated(:assoc) yields the following:
+* it returns {:assoc => assoc_moc, :assoc_id => assoc_mock.id}
+* Assoc.exists? is stubbed and will return true
+* Assoc.find(assoc_mock.id) will return assoc_mock
 
 == Usage
 
