@@ -48,6 +48,11 @@ describe "existence_validated" do
         existence_validated([:assoc])
       end
       
+      it "should stub calls to Model.find with mock_id and return the mock" do
+        existence_validated(:assoc)
+        Assoc.find(@mock.id).should eql(@mock)
+      end
+      
       it "should return a hash with assoc mock id and assoc mock" do
         existence_validated([:assoc]).should  == {
           :assoc_id => @mock.id,
@@ -95,10 +100,15 @@ describe "existence_validated" do
         end
       end
       
-      it "should fail if one of the required associations is not in place" do
+      it "should fail if one of the required associations is not in place[1]" do
         lambda{Model.create!(existence_validated([:other_assoc]))}.should raise_error(/Assoc/)
+      end
+      
+      it "should fail if one of the required associations is not in place[2]" do
         lambda{Model.create!(existence_validated([:assoc]))}.should raise_error(/Other/)
       end
+      
+      
       
       describe "existence_validated([:assocs, :other_assoc])" do
         
@@ -114,14 +124,20 @@ describe "existence_validated" do
           Model.create!(existence_validated([:assoc, :other_assoc]))
         end
         
-        it "should fail if both required assocs are provided, but one is nilified in the options" do
+        it "should fail if both required assocs are provided, but one is nilified in the options[1]" do
           lambda {Model.create!(existence_validated([:assoc, :other_assoc], :assoc => nil))}.should raise_error(/Assoc/)
+        end
+        
+        it "should fail if both required assocs are provided, but one is nilified in the options[2]" do
           lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(/Other/)
         end
         
-        it "should not fail if both required assocs are provided, but one is specified in the options" do
-          Model.create!(existence_validated([:assoc, :other_assoc], :assoc => mock_model(Assoc)))
+        it "should not fail if both required assocs are provided, but one is specified in the options[1]" do
           Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => mock_model(OtherAssoc)))
+        end
+        
+        it "should not fail if both required assocs are provided, but one is specified in the options[2]" do
+          Model.create!(existence_validated([:assoc, :other_assoc], :assoc => mock_model(Assoc)))
         end
         
         it "should work any number of times" do
