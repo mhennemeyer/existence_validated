@@ -5,7 +5,9 @@ def existence_validated(assocs=[], options={})
       klass = assoc.to_s.camelize.constantize
       mock = options[assoc] || mock_model(klass)
       klass.should_receive(:exists?).any_number_of_times.and_return(true)
-      klass.should_receive(:find).any_number_of_times.with(mock.id).and_return(mock)
+      klass.should_receive(:find).any_number_of_times.and_return do |id, options|
+        id == mock.id ? mock : false
+      end
       memo.update({
         assoc.to_s.concat("_id").to_sym => mock.id,
         assoc => mock
