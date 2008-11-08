@@ -24,7 +24,7 @@ describe "existence_validated" do
     Model.create!
   end
   
-  describe "with validates_existence declared in Model" do
+  describe "with 'validates_existence_of :assoc' declared in Model" do
     before(:each) do
       Model.instance_eval{validates_existence_of :assoc}
     end
@@ -34,6 +34,19 @@ describe "existence_validated" do
     
     it "should pass with required assoc" do
       Model.create! :assoc => Assoc.create!
+    end
+    
+    it "should not persist - false positive" do
+      existence_validated(:assoc)
+      lambda {Model.create!}.should raise_error
+    end
+    
+    it "should not persist - false negative" do
+      mock = existence_validated(:assoc)[:assoc]
+      Assoc.exists?(mock.id).should be_true
+      mock = existence_validated(:assoc)[:assoc]
+      Assoc.exists?(mock.id).should be_true
+      Model.create!(existence_validated(:assoc))
     end
     
     describe "and calling existence_validated([:assoc])" do
@@ -66,11 +79,6 @@ describe "existence_validated" do
       
       it "should work with a single argument" do
         Model.create!(existence_validated(:assoc))
-      end
-      
-      it "should not persist" do
-        existence_validated(:assoc)
-        lambda {Model.create!}.should raise_error
       end
       
       describe "with options" do
@@ -130,11 +138,11 @@ describe "existence_validated" do
         end
         
         it "should fail if both required assocs are provided, but one is nilified in the options[1]" do
-          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :assoc => nil))}.should raise_error(/Assoc/)
+          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :assoc => nil))}.should raise_error(%r(Assoc does not exist))
         end
         
         it "should fail if both required assocs are provided, but one is nilified in the options[2]" do
-          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(/Other/)
+          lambda {Model.create!(existence_validated([:assoc, :other_assoc], :other_assoc => nil))}.should raise_error(%r(Other assoc does not exist))
         end
         
         it "should not fail if both required assocs are provided, but one is specified in the options[1]" do
