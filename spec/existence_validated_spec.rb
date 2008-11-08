@@ -68,6 +68,11 @@ describe "existence_validated" do
         Model.create!(existence_validated(:assoc))
       end
       
+      it "should not persist" do
+        existence_validated(:assoc)
+        lambda {Model.create!}.should raise_error
+      end
+      
       describe "with options" do
         it "should not create a mock if one is passed" do
           should_not_receive(:mock_model)
